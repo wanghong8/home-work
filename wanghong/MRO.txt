@@ -1,0 +1,10 @@
+MRO:采用剪枝的方法来分析,得：E→C→D→B→A
+C3算法：
+ L(B)=L(BA)=B+merge(A)=B+A=B→A
+L（E(C,D)）=E+merge(L(C),L(D),CD)
+                 =E+merge(CB,DB,CD)
+                 =E+C+merge(B,DB,D)
+                 =E+C+D+merge(B,B)
+                 =E+C+D+B=E→C→D→B=E→C→D→B→A
+
+
